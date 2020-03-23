@@ -43,8 +43,6 @@
           <va-tree-node>Skirts</va-tree-node>
         </va-tree-category>
       </va-tree-root>
-      <va-chart type="line" :data="chartData"/>
-      <va-button color="info" @click="refreshData">RefreshChartColors</va-button>
       <va-file-upload v-model="files" color="info"/>
     </VbCard>
     <VbCard title="Change color">
@@ -85,24 +83,18 @@
 </template>
 
 <script>
-import VaIcon from './../../vuestic-components/va-icon/VaIcon'
 import VaButton from './../../vuestic-components/va-button/VaButton'
 import VaNotification
   from './../../vuestic-components/va-notification/VaNotification'
 import VaProgressBar
   from './../../vuestic-components/va-progress-bar/progress-types/VaProgressBar'
-import VaPaletteCustom
-  from '../../vuestic-components/va-color-picker/VaPaletteCustom'
 import VaColorPickerInput
   from '../../vuestic-components/va-color-picker/VaColorPickerInput'
 import VaRating from '../../vuestic-components/va-rating/VaRating'
-import SquareWithIcon
-  from '../../vuestic-components/va-tree-view/SquareWithIcon/SquareWithIcon'
 import VaTreeRoot from '../../vuestic-components/va-tree-view/VaTreeRoot'
 import VaTreeCategory
   from '../../vuestic-components/va-tree-view/VaTreeCategory'
 import VaTreeNode from '../../vuestic-components/va-tree-view/VaTreeNode'
-import VaChart from '../../vuestic-components/va-chart/VaChart'
 import { getLineChartData } from '../../../data/charts/LineChartData'
 import VaBadge from '../../vuestic-components/va-chip/VaBadge'
 import VaFileUpload from '../../vuestic-components/va-file-upload/VaFileUpload'
@@ -110,19 +102,15 @@ import VaFileUpload from '../../vuestic-components/va-file-upload/VaFileUpload'
 export default {
   components: {
     VaBadge,
-    VaChart,
     VaFileUpload,
     VaTreeNode,
     VaTreeCategory,
     VaTreeRoot,
-    SquareWithIcon,
     VaRating,
     VaColorPickerInput,
-    VaIcon,
     VaButton,
     VaNotification,
     VaProgressBar,
-    VaPaletteCustom,
   },
   data () {
     return {

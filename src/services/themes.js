@@ -1,8 +1,8 @@
 export const originalTheme = Object.freeze({
   context: {
-    'gradient': true,
-    'shadow': 'lg', // 3 states: 'sm', 'lg', undefined (no shadow).
-    'invertedColor': false,
+    gradient: true,
+    shadow: 'lg', // 3 states: 'sm', 'lg', undefined (no shadow).
+    invertedColor: false,
   },
   colors: {
     primary: '#40e583',
@@ -18,9 +18,9 @@ export const originalTheme = Object.freeze({
 
 export const corporateTheme = Object.freeze({
   context: {
-    'gradient': false,
-    'shadow': 'sm',
-    'invertedColor': true,
+    gradient: false,
+    shadow: 'sm',
+    invertedColor: true,
   },
   colors: {
     primary: '#6c7fee',
